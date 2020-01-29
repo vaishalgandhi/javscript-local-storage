@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title> Our Lab 4 Example</title>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <script src="script2.js" charset="UTF-8"></script>
+    </head>
+    <body>
+       
+        <table>
+		    <caption>
+                Check this carefully
+            </caption>
+            <thead>
+                <tr>
+                    <th class="btn_rm"></th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+            <tfoot id="tfoot" onkeyup="onEnterPressed(event)">
+                <tr>
+                    <td></td>
+                    <td><input id="name" type="text"></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <button onClick="refreshTable()">
+			Reload
+		</button>
+
+    </body>
+</html>

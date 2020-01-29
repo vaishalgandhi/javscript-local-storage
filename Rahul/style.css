@@ -1,0 +1,36 @@
+body {
+/*    background-color: aquamarine;*/
+}
+
+caption {
+    caption-side: bottom;
+}
+
+table, tr, th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+}
+
+th:not(.btn_rm) {
+    width: 200px;
+}
+
+tr:hover {
+    background-color: aquamarine;
+}
+
+input {
+    border: 0px;
+    width: 95%;
+    background-color: inherit;
+    outline: none;
+    text-align: center;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+code {
+    background-color: gainsboro;
+    /* color: lightcoral; */
+}
