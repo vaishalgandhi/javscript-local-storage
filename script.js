@@ -1,3 +1,5 @@
+var rowId = 0;
+
 function fetchElement(id) {
 	return document.getElementById(id);
 }
@@ -27,7 +29,9 @@ function addRecord() {
 		return;
 	}
 
-	var text = "<tr><td><button class=\"btn-danger\" onclick=\"deleteRecord(this)\">Delete</button></td><td>"+ first +"</td><td>"+ last +"</td><td>"+ age +"</td></tr>";
+	rowId++;
+
+	var text = "<tr id=entry-"+rowId+"><td><button class=\"btn-danger\" onclick=\"deleteRecord("+rowId+")\">Delete</button></td><td>"+ first +"</td><td>"+ last +"</td><td>"+ age +"</td></tr>";
 
 	fetchElement("table-body").innerHTML += text;
 
@@ -38,6 +42,6 @@ function addRecord() {
 	return true;
 }
 
-function deleteRecord(element) {
-	var row = element.parentElement.parentElement.remove();
+function deleteRecord(id) {
+	document.getElementById("entry-"+id).remove();
 }
