@@ -1,4 +1,10 @@
-var rowId = 0;
+var rowId = 3;
+
+var entries = [
+	{id: 1, "first": "Vaishal", "last": "Gandhi", "age": 21},
+	{id: 2, "first": "Rahul", "last": "Nagpal", "age": 24},
+	{id: 3, "first": "Hasmukh", "last": "Solanki", "age": 25},
+];
 
 function fetchElement(id) {
 	return document.getElementById(id);
@@ -40,6 +46,16 @@ function addRecord() {
 	fetchElement("age").value = "";
 
 	return true;
+}
+
+function reloadEntries() {
+	var text = "";
+	
+	entries.forEach(item => {
+		text += "<tr id=entry-"+item.id+"><td><button class=\"btn-danger\" onclick=\"deleteRecord("+item.id+")\">Delete</button></td><td>"+ item.first +"</td><td>"+ item.last +"</td><td>"+ item.age +"</td></tr>";
+	});
+
+	fetchElement("table-body").innerHTML += text;
 }
 
 function deleteRecord(id) {
